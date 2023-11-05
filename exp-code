@@ -1,0 +1,36 @@
+# successful attempt - with gpt help :\
+    
+import math
+import cmath
+
+functions = {
+    
+"pi": lambda x: math.pi,
+"e": lambda x: math.e,
+"sine": lambda x: math.sin(x),
+"cosine": lambda x: math.cos(x),
+"tangent": lambda x: math.tan(x),
+"sinh": lambda x: math.sinh(x),
+"cosh": lambda x: math.cosh(x),
+"tanh": lambda x: math.tanh(x),
+"i": cmath.sqrt(-1),
+"none": lambda x: x,       
+     # the lambda is saying 'define it later, don't worry rn bro'
+}
+
+base = input("Pick your function (pi, e, sine, cosine, tangent, sinh, cosh, tanh, i, none) :").lower()
+# the '.lower()' piece is to make the calling case-insensitive... 
+# so if u do all caps, the program will still respond'
+
+if base in functions:
+    x = float(input("Insert the variable for your base (x): "))
+    # for sin, cos, tan, & their hyperballics
+    power = float(input("Insert the variable for your power: "))
+    answer = functions[base](x) ** power
+    # condenses it for you.
+    print(f"{base}^{power}({x}) = {answer}")
+# it'll spit it out in ur terminal.
+else:
+    print("We cannot resolve your problem. Check your inputs.")
+
+# so for pi & e, the variable for ur base (x): type in zero.
