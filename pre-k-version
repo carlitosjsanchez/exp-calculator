@@ -1,0 +1,9 @@
+# exponential calculator, take 2 lol - basic level
+
+import math
+
+numbers = float(input("What's the power?"))
+
+answer = math.exp(numbers)
+
+print("The exponential function will be:", answer)
