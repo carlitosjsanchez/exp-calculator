@@ -1,0 +1,35 @@
+# next level exp calculator lmao
+
+import math
+
+functions = [
+    {"pi": math.pi},
+    {"e": math.e},
+    {"sine": math.sin(x)},
+    {"cosine": math.cos(x)},
+    {"tangent": math.tan(x)},
+    {"hyperbolic sine": math.sinh(x)},
+    {"hyperbolic cosine": math.cosh(x)},
+    {"hyperbolic tangent": math.tanh(x)},
+    {"imaginary number": math},
+    {"None": None},
+
+]
+
+
+base = float(input("What's your function selection?"))
+
+if base == "pi":
+    power = float(input("what's your power?"))
+    
+elif base == "e":
+    power = float(input("What's your power?"))
+    
+elif base == "sine":
+    x = float(input("What's the value for the base?"))
+    power = float(input("What's your power?"))
+    
+elif base == "cosine":
+    x = float(input("What's the value for the base?"))
+    power = float(input("What's your power?"))
+# was supposed to continue lol, but stopped, too much elif's hahaha
