@@ -1,0 +1,46 @@
+# 3rd attempt calc - with gpt help now :\
+    
+import math
+import cmath
+
+functions = {
+    
+"pi": math.pi,
+"e": math.e,
+"sine": lambda x: math.sin(x),
+"cosine": lambda x: math.cos(x),
+"tangent": lambda x: math.tan(x),
+"sinh": lambda x: math.sinh(x),
+"cosh": lambda x: math.cosh(x),
+"tanh": lambda x: math.tanh(x),
+"i": cmath.sqrt(-1),
+"none": lambda x: x,       
+    
+}
+
+base = input("Pick your function (pi, e, sine, cosine, tangent, sinh, cosh, tanh, i, none) :").lower()
+# the '.lower()' piece is to make the calling case-insensitive... 
+# so if u do all caps, the program will still respond'
+
+if base in functions:
+    x = float(input("Insert the variable for your base (x): "))
+    power = float(input("Insert the variable for your power: "))
+    answer = functions[base](x) ** power
+    print(f"{base}^{power}({x}) = {answer}")
+
+elif base == "pi" in functions: # to call these specific functions
+    power = float(input("Insert the variable for your power: "))
+    answer = functions[base] ** power
+    print(f"{base}^{power} = {answer}")
+    
+    # when doing these, add an extra space before writing 'pi' or 'e'.
+    
+elif base == "e" in functions: # to call these specific functions
+    power = float(input("Insert the variable for your power: "))
+    answer = functions[base] ** power
+    print(f"{base}^{power} = {answer}")
+
+
+else:
+    print("We cannot resolve your problem. Check your inputs.")
+    
