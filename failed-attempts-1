@@ -1,0 +1,38 @@
+# EXPONENTIONAL CALCULATOR
+
+import math
+
+input("What special function do you need?")
+
+
+
+positive_infinity = float('inf')
+negative_infinity = float('-inf')
+
+functions = [
+    {"pi": math.pi},
+    {"e": math.e},
+    {"sine": math.sin()},
+    {"cosine": math.cosine},
+    {"tangent": math.tan()},
+    {"hyperbolic sine": math.sinh()},
+    {"hyperbolic cosine": math.cosh()},
+    {"hyperbolic tangent": math.tanh()},
+    {"infinity": positive_infinity},
+    {"negative infinity": negative_infinity},
+    {"None": None},
+
+]
+
+
+print("Input your base number")
+
+base = float(input())
+
+print("Input your power number")
+
+power = float(input())
+
+answer = base ** power
+
+print("Your answer is:", (answer))
